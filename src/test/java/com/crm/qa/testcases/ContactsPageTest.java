@@ -47,6 +47,13 @@ public class ContactsPageTest extends TestBase {
 		contactsPage.selectContactsByName("Tester 2 VJ");
 	}
 	
+	@Test (priority = 3)
+	public void validateCreateNewContact()
+	{
+		homePage.clickOnNewContactLink();
+		contactsPage.createNewContact("Mr.", "VJ1", "VJ1", "VJ1");
+	}
+	
 	@AfterMethod
 	public void tearDown()
 	{
